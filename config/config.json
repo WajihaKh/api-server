@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "wajiha_khan",
+    "password": "E6eSo44X262K5RWsI9wlP5USCKW458o0",
+    "database": "database_development",
+    "host": "postgres://dpg-copb4221hbls7385mjpg-a.oregon-postgres.render.com",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "wajiha_khan",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
