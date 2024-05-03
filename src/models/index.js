@@ -31,7 +31,7 @@ const authorCollection = new Collection(authorModel);
 module.exports = {
   db: sequelize,
   Books: bookCollection,
-  Authors: authorCollection,
+  Author: authorCollection,
   Animal: animalModel(sequelize, DataTypes),
   Food: foodModel(sequelize, DataTypes),
 };
