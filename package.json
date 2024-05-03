@@ -1,16 +1,15 @@
 {
   "name": "api-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "API Server",
   "main": "index.js",
   "scripts": {
-    "init:config": "sequelize init:config",
-    "db:create": "sequelize db:create",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test jest --coverage",
+    "test-watch": "NODE_ENV=test jest --watchAll --coverage",
+    "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "John Cokos",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",

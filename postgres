@@ -1,0 +1,42 @@
+\q
+create database 401
+\l
+create database "401"
+\l
+\c 401
+\c "401"
+create database 401
+\l
+\c wajihakh
+create database 401
+\l
+exit
+quit
+quit.
+\q
+cd ..
+\q
+\l
+\q
+\l
+create database 401;
+create database "401";
+\l
+\q
+\l
+\q
+\l
+c\ postgres;
+c\ postgres
+\c postgres;
+\q
+\l
+\c postgres
+\dt
+\d tableFood
+\d tablefood
+\d tableName
+\d tableFood
+\q
+\l
+\s postgres

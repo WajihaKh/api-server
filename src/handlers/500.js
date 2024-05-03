@@ -10,6 +10,7 @@ function handleErrors( error, request, response, next ) {
     params: request.params,
     error: error.message,
   };
+  response.status(500).json(output);
 }
 
 module.exports = handleErrors;
