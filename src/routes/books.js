@@ -3,20 +3,20 @@
 const express = require('express');
 const router = express.Router();
 
-const {Books, Authors} = require('../models/index.js');
+const {Books} = require('../models/index.js');
 
 const Model = Books;
 
 router.get('/', getAll);
 router.get('/:id', getOne);
-router.post('/:id', createRecord);
+router.post('/', createRecord);
 router.put('/:id', updateRecord);
 router.delete('/:id', deleteRecord);
 
 async function getAll( request, response ) {
   let data = await Model.read( null, {
     include: {
-      model: Authors.model,
+      model: Books.model,
     },
   });
   response.status(200).json(data);
@@ -26,7 +26,7 @@ async function getOne( request, response ) {
   let id = request.params.id;
   let data = await Model.read(id, {
     include: {
-      model: Authors.model,
+      model: Books.model,
     },
   });
   response.status(200).json(data);
