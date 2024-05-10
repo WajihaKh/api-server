@@ -22,8 +22,8 @@ let sequelize = new Sequelize(DATABASE_URL, {logging:false});
 const bookModel = bookSchema(sequelize, DataTypes);
 const authorModel = authorSchema(sequelize, DataTypes);
 
-bookModel.hasMany(authorModel, {foreignKey: 'bookId', sourceKey: 'id'});
-authorModel.belongsTo(bookModel, {foreignKey: 'authorId', targetKey: 'id'});
+authorModel.hasMany(bookModel, {foreignKey: 'authorId', sourceKey: 'id'});
+bookModel.belongsTo(authorModel, {foreignKey: 'authorId', targetKey: 'id'});
 
 const bookCollection = new Collection(bookModel);
 const authorCollection = new Collection(authorModel);

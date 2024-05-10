@@ -12,10 +12,6 @@ const Book = (sequelize, DataTypes) => sequelize.define('Book', {
   authorId: {
     type: DataTypes.INTEGER,
     allowNull: false,
-    references: {
-      model: 'Author',
-      key: 'id',
-    },
   },
 });
 

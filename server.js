@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(animal);
 app.use(foodRoutes);
 app.use('/books', bookRoutes);
-app.use('/author', authorRoutes);
+app.use('/authors', authorRoutes);
 // Force an error for the tests
 app.get('/broken', (req,res,next) => next('whoops!'));
 
