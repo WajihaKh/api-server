@@ -3,7 +3,7 @@
 const express = require('express');
 const router = express.Router();
 
-const {Author} = require('../models/index.js');
+const {Author, Books} = require('../models/index.js');
 
 const Model = Author;
 
@@ -16,7 +16,7 @@ router.delete('/:id', deleteRecord);
 async function getAll( request, response ) {
   let data = await Model.read(null, {
     include: {
-      model: Author.model,
+      model: Books.model,
     },
   });
   response.status(200).json(data);
@@ -26,7 +26,7 @@ async function getOne( request, response ) {
   let id = request.params.id;
   let data = await Model.read(id, {
     include: {
-      model: Author.model,
+      model: Books.model,
     },
   });
   response.status(200).json(data);
